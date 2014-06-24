@@ -104,7 +104,7 @@ if ~retcode
             nshocks=sum(obj.exogenous.number);
             for ii=1:nshocks
                 shock=obj.options.shock_properties(ii).name;
-                shock_id=strcmp(shock,{obj.varexo.name});
+                shock_id=strcmp(shock,{obj.exogenous.name});
                 horizon=obj.options.shock_properties(ii).horizon;
                 for istate=1:numel(RR)
                     RR{istate}(:,shock_id,horizon+1:end)=0;
